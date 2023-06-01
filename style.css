@@ -172,37 +172,19 @@ article.small > .img-article {
   width: 80%;
 }
 
-.img-second-article > button,
-.img-third-article > button {
-  padding: 3px;
-  border-radius: 5px;
-  border: none;
-  background-color: antiquewhite;
-}
-.img-article > button {
-  width: 80%;
-  padding: 0.2em;
-  border-radius: 5px;
-  border: none;
+button {
   background-color: rgba(0, 0, 0, 0.332);
   color: whitesmoke;
-}
-.img-first-article > button {
-  padding: 5%;
-  border: none;
   border-radius: 5px;
-  background-color: antiquewhite;
+  border: none;
+  padding: 0.2em 0.8em;
+}
+
+article.big button {
+  width: 100%;
 }
 
 /* * * * * * * * * * * * */
-
-p > button {
-  padding: 0.2em;
-  border-radius: 5px;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.332);
-  color: whitesmoke;
-}
 
 .menu-article {
   display: grid;
