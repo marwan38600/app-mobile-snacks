@@ -8,6 +8,10 @@ body {
   margin: 10px;
 }
 
+.image-container > img {
+  width: 100%;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -86,16 +90,6 @@ main {
   text-align: center;
 }
 
-.filter > button {
-  display: flex;
-  background-color: #d9d9d9;
-  border-radius: 5px;
-  height: 20px;
-  padding: 5px;
-  align-items: center;
-  border: none;
-}
-
 .tendances,
 .menus {
   width: 100%;
@@ -114,6 +108,14 @@ main {
 
 .menus > h2 {
   margin-top: 15px;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.332);
+  color: whitesmoke;
+  border-radius: 5px;
+  border: none;
+  padding: 0.2em 0.8em;
 }
 
 /* * * * * * * * * * * * */
@@ -146,13 +148,14 @@ article {
 article.big > .text-article {
   font-size: 18px;
 }
-
+article.big .img-article .image-container {
+  width: 80%;
+}
+article.big button {
+  width: 100%;
+}
 article.small > .text-article {
   font-size: 15px;
-}
-article.small > .img-article {
-  align-items: center;
-  justify-content: space-around;
 }
 
 /* * * * * * * * * * * * */
@@ -164,48 +167,12 @@ article.small > .img-article {
   justify-content: space-around;
 }
 
-.img-article > img {
-  width: 100%;
-}
-
-.img-article :first-child {
-  width: 80%;
-}
-
-button {
-  background-color: rgba(0, 0, 0, 0.332);
-  color: whitesmoke;
-  border-radius: 5px;
-  border: none;
-  padding: 0.2em 0.8em;
-}
-
-article.big button {
-  width: 100%;
-}
-
 /* * * * * * * * * * * * */
 
-.menu-article {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: rgba(175, 96, 96, 0.38);
-  padding: 10px;
-  border-radius: 5px;
-  gap: 10px;
+.menus article .img-article {
+  flex-direction: row;
 }
-
-.first-img-menu > img,
-.second-img-menu > img {
-  width: 100%;
-}
-
-.menu-img-article {
-  display: flex;
-  align-items: center;
-}
-
-.menu-img-article > div {
+.menus article .img-article > div {
   width: 50%;
 }
 
