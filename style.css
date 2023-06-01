@@ -124,7 +124,7 @@ button {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
-.articles-container article:first-child {
+.articles-container article.big {
   grid-column-start: 1;
   grid-column-end: 3;
 }
@@ -145,6 +145,10 @@ article {
 }
 
 /* * * * * * * * * * * * */
+article > .text-article {
+  font-size: 15px;
+}
+
 article.big > .text-article {
   font-size: 18px;
 }
@@ -153,9 +157,6 @@ article.big .img-article .image-container {
 }
 article.big button {
   width: 100%;
-}
-article.small > .text-article {
-  font-size: 15px;
 }
 
 /* * * * * * * * * * * * */
