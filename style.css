@@ -124,6 +124,13 @@ button {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
+
+.menus-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .articles-container article.big {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -192,4 +199,8 @@ article.big button {
   justify-content: space-around;
   background-color: whitesmoke;
   padding: 5px;
+}
+
+.menus article:nth-child(2n) > :first-child {
+  order: 2;
 }
