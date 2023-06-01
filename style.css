@@ -116,25 +116,23 @@ main {
   margin-top: 15px;
 }
 
-.big-article,
-.small-article1,
-.small-article2 {
+/* * * * * * * * * * * * */
+.articles-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.articles-container article:first-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+article {
   background-color: rgba(175, 96, 96, 0.38);
   padding: 10px;
   border-radius: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr; /* 1fr pour le contenu texte, auto pour l'image */
-}
-
-.small-article {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.small-article1,
-.small-article2 {
-  width: 42%;
 }
 
 .text-article {
@@ -144,39 +142,24 @@ main {
   gap: 5px;
 }
 
-.big-article > .text-article {
+/* * * * * * * * * * * * */
+article.big > .text-article {
   font-size: 18px;
 }
 
-.small-article > .text-article {
+article.small > .text-article {
   font-size: 15px;
 }
-
-.img-article {
-  display: flex;
-  flex-direction: column;
+article.small > .img-article {
   align-items: center;
   justify-content: space-around;
 }
 
-.img-article > button {
-  width: 80%;
-  padding: 0.2em;
-  border-radius: 5px;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.332);
-  color: whitesmoke;
-}
+/* * * * * * * * * * * * */
 
-p > button {
-  padding: 0.2em;
-  border-radius: 5px;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.332);
-  color: whitesmoke;
-}
-
-.small-article > .img-article {
+.img-article {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
@@ -196,12 +179,29 @@ p > button {
   border: none;
   background-color: antiquewhite;
 }
-
+.img-article > button {
+  width: 80%;
+  padding: 0.2em;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.332);
+  color: whitesmoke;
+}
 .img-first-article > button {
   padding: 5%;
   border: none;
   border-radius: 5px;
   background-color: antiquewhite;
+}
+
+/* * * * * * * * * * * * */
+
+p > button {
+  padding: 0.2em;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.332);
+  color: whitesmoke;
 }
 
 .menu-article {
@@ -227,6 +227,7 @@ p > button {
   width: 50%;
 }
 
+/* * * * * * * * * * * * */
 .footer {
   margin: auto;
   display: flex;
